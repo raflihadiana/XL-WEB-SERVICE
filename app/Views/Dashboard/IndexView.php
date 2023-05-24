@@ -1,4 +1,4 @@
-<?= $this->extend('Layouts/IndexView') ?>
+<?= $this->extend('_Layouts/IndexView') ?>
 
 <?= $this->section('content') ?>
 <div class="page-heading">
