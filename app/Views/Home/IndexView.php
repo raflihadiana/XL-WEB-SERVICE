@@ -1,34 +1,59 @@
-<?= $this->extend('_Layouts/IndexView') ?>
+<!DOCTYPE html>
+<html lang="en">
 
-<?= $this->section('content') ?>
-<div class="page-heading">
-    <div class="page-title">
-        <div class="row">
-            <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Layout Default</h3>
-                <p class="text-subtitle text-muted">The default layout </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mazer Admin Dashboard</title>
+    <link rel="stylesheet" href="/mazer/dist/assets/css/main/app.css">
+    <link rel="stylesheet" href="/mazer/dist/assets/css/pages/auth.css">
+    <link rel="shortcut icon" href="/mazer/dist/assets/images/logo/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/mazer/dist/assets/images/logo/favicon.png" type="image/png">
+</head>
+
+<body>
+    <div id="auth">
+        
+<div class="row h-100">
+    <div class="col-lg-5 col-12">
+        <div id="auth-left">
+            <div class="auth-logo">
+                <a href="index.html"><img src="/mazer/dist/assets/images/logo/xl.svg" alt="Logo"></a>
             </div>
-            <div class="col-12 col-md-6 order-md-2 order-first">
-                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Layout Default</li>
-                    </ol>
-                </nav>
-            </div>
+            <h1 class="auth-title">Log in.</h1>
+            <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p>
+
+            <form action="/dashboard">
+                <div class="form-group position-relative has-icon-left mb-4">
+                    <input type="text" class="form-control form-control-xl" placeholder="Username">
+                    <div class="form-control-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+                </div>
+                <div class="form-group position-relative has-icon-left mb-4">
+                    <input type="password" class="form-control form-control-xl" placeholder="Password">
+                    <div class="form-control-icon">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+                </div>
+                <div class="form-check form-check-lg d-flex align-items-end">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label text-gray-600" for="flexCheckDefault">
+                        Keep me logged in
+                    </label>
+                </div>
+                <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Log in</button>
+            </form>
         </div>
     </div>
-    <section class="section">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Default Layout</h4>
-            </div>
-            <div class="card-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, commodi? Ullam quaerat similique iusto
-                temporibus, vero aliquam praesentium, odit deserunt eaque nihil saepe hic deleniti? Placeat delectus
-                quibusdam ratione ullam!
-            </div>
+    <div class="col-lg-7 d-none d-lg-block">
+        <div id="auth-right">
+
         </div>
-    </section>
+    </div>
 </div>
-<?= $this->endSection() ?>
+
+    </div>
+</body>
+
+</html>
