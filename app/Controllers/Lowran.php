@@ -10,3 +10,4 @@ class Lowran extends BaseController
         return view('/Lowran/IndexView', $data);
     }
 }
+
