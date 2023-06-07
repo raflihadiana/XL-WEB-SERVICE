@@ -33,7 +33,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/lowran', 'Lowran::lowran');
 $routes->get('/highran', 'Highran::highran');
 $routes->get('/dashboard', 'Dashboard::dashboard');
-$routes->get('/maps', 'Maps::maps');
+$routes->match(['get', 'post'], '/maps', 'Maps::index');
 // $routes->get('/faqs', 'Page::faqs');
 /*
  * --------------------------------------------------------------------

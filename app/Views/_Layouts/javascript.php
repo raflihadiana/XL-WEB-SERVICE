@@ -18,6 +18,7 @@
 <script src="https://zuramai.github.io/mazer/demo/assets/extensions/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="https://zuramai.github.io/mazer/demo/assets/extensions/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://zuramai.github.io/mazer/demo/assets/static/js/pages/datatables.js"></script>
+<script src="https://zuramai.github.io/mazer/demo/assets/compiled/js/app.js"></script>
 <!-- <script src="/mazer/dist/assets/pages/datatables.js"></script> -->
 <!-- <script src="/mazer/dist/assets/pages/jquery-datatables/custom.jquery.dataTables.bootstrap5.min.js"></script>
 <script src="/mazer/dist/assets/pages/fontawesome/all.min.js"></script> -->
