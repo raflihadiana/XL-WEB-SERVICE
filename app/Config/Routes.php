@@ -31,8 +31,11 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/lowran', 'Lowran::lowran');
+$routes->get('/lowran/export', 'Lowran::export');
 $routes->get('/highran', 'Highran::highran');
-$routes->get('/member', 'Member::member');
+$routes->get('/member', 'Member::index');
+$routes->get('/member/form', 'Member::form');
+$routes->post('/member/save', 'Member::save');
 $routes->get('/dashboard', 'Dashboard::dashboard');
 
 $routes->get('/maps', 'Maps::index');

@@ -60,7 +60,7 @@
                               ></a>
                               <a
                                 class="dropdown-item justify-content-between"
-                                href="#"
+                                href="<?=site_url('lowran/export')?>"
                                 >Export XLS <i class="bi bi-filetype-xls"></i
                               ></a>
                               <a
