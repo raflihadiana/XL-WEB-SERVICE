@@ -39,7 +39,7 @@ class Lran extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'site_name' => [
+            'site_name_nd' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
@@ -51,7 +51,7 @@ class Lran extends Migration
                 'type'       => 'DECIMAL',
                 'constraint' => '10,7',
             ],
-            'priority' => [
+            'priority_nd' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],

@@ -53,11 +53,27 @@
             <li
                 class="sidebar-item  ">
                 <a href="/maps" class='sidebar-link'>
-                    <i class="bi bi-map-fill"></i>
+                    <i class="bi bi-pin-map-fill"></i>
                     <span>Fiber Map</span>
                 </a>
             </li>
             
+            <li class="sidebar-title">Information</li>
+
+            <li
+                class="sidebar-item  ">
+                <a href="/member" class='sidebar-link'>
+                    <i class="bi bi-people-fill"></i>
+                    <span>Member</span>
+                </a>
+            </li>
+            <li
+                class="sidebar-item  ">
+                <a href="/" class='sidebar-link'>
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

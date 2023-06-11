@@ -9,4 +9,9 @@ class Dashboard extends BaseController
         $data['title'] = 'Welcome !!';
         return view('/Dashboard/IndexView', $data);
     }
+
+    // public function index()
+    // {
+    //     $this->load->helper('custom_helper');
+    // }
 }

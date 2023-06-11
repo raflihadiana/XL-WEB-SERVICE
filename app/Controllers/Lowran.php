@@ -2,17 +2,24 @@
 
 namespace App\Controllers;
 
+use App\Models\LowranModel;
+
 class Lowran extends BaseController
 {
+    protected $lowranModel;
+    public function __construct()
+    {
+        $this->lowranModel = new LowranModel();
+    }
     public function lowran()
     {
-        $data['title'] = 'Welcome !!';
+        $lowran = $this->lowranModel->findAll();
+
+        $data = [
+            'title' => 'Data LowRAN',
+            'lowran' => $lowran
+        ];
         return view('/Lowran/IndexView', $data);
-    }
-    public function insert()
-    {
-        $data['title'] = 'Welcome !!';
-        return view('/Lowran/InsertView', $data);
     }
 }
 

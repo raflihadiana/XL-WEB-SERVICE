@@ -32,8 +32,12 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/lowran', 'Lowran::lowran');
 $routes->get('/highran', 'Highran::highran');
+$routes->get('/member', 'Member::member');
 $routes->get('/dashboard', 'Dashboard::dashboard');
-$routes->match(['get', 'post'], '/maps', 'Maps::index');
+
+$routes->get('/maps', 'Maps::index');
+// $routes->post('/maps/action', 'Maps::action', ['as' => 'ajaxupload.action']);
+$routes->post('/maps/action', 'Maps::action', ['as' => 'ajaxupload.action']);
 // $routes->get('/faqs', 'Page::faqs');
 /*
  * --------------------------------------------------------------------

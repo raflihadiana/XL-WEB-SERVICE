@@ -30,38 +30,12 @@
 <script>
     // Jquery Datatable
     $(document).ready(function() {
-    var table = $('#dt').DataTable( {       
+    var table = $('#dt').DataTable( { 
+        ordering: false,      
         scrollX:        true,
         scrollCollapse: true,
         autoWidth:         true,  
-        paging:         true,       
-        columnDefs: [
-      { "width": "100px", "targets": [0] },
-      { "width": "80px", "targets": [1] },
-      { "width": "30px", "targets": [2] },
-      { "width": "30px", "targets": [3] },
-      { "width": "50px", "targets": [4] },
-      { "width": "100px", "targets": [5] },
-      { "width": "80px", "targets": [6] },
-      { "width": "30px", "targets": [7] },
-      { "width": "30px", "targets": [8] },
-      { "width": "50px", "targets": [9] },
-      { "width": "80px", "targets": [10] },
-      { "width": "140px", "targets": [11] },
-      { "width": "80px", "targets": [12] },
-      { "width": "80px", "targets": [13] },
-      { "width": "95px", "targets": [14] },
-      { "width": "115px", "targets": [15] },
-      { "width": "110px", "targets": [16] },
-      { "width": "80px", "targets": [17] },
-      { "width": "80px", "targets": [18] },
-      { "width": "100px", "targets": [19] },
-      { "width": "20px", "targets": [20] },
-      { "width": "150px", "targets": [21] },
-      { "width": "30px", "targets": [22] },
-      { "width": "130px", "targets": [23] },
-      { "width": "100px", "targets": [24] }
-      ]
+        paging:         true
     } );
 } );
 </script>

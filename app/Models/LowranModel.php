@@ -7,13 +7,39 @@ use CodeIgniter\Model;
 class LowranModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'lowrans';
+    protected $table            = 'lowran';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields = [
+        'tower_id_ne',
+        'site_name',
+        'long',
+        'lat',
+        'priority',
+        'tower_id_fe',
+        'site_name',
+        'long',
+        'lat',
+        'priority',
+        'ba_desain',
+        'ba_design_status',
+        'pag_link',
+        'link_name',
+        'city_design',
+        'city_dominan',
+        'status_design',
+        'span_seq',
+        'plan_ring',
+        'type_design',
+        'flp',
+        'plan_distance_km',
+        'x_c',
+        'status_design_xc',
+        'syncron_own',
+    ];
 
     // Dates
     protected $useTimestamps = true;
