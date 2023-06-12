@@ -35,57 +35,6 @@
                   <div>
                     <h5 class="card-title">Engpar Database</h5>
                   </div>
-                    <div class="btn-group mb-1">
-                      
-                          <div class="dropdown icon-right">
-                            <button
-                              class="btn btn-primary dropdown-toggle me-1"
-                              type="button"
-                              id="dropdownMenuButtonIconRight"
-                              data-bs-toggle="dropdown"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              Action <i class="bi bi-error-circle ms-2"></i>
-                            </button>
-                            <div
-                              class="dropdown-menu"
-                              aria-labelledby="dropdownMenuButtonIconRight"
-                            >
-                              <a
-                                class="dropdown-item justify-content-between"
-                                href="#"
-                                >Upload
-                                <i class="bi bi-cloud-upload"></i
-                              ></a>
-                              <a
-                                class="dropdown-item justify-content-between"
-                                href="<?=site_url('lowran/export')?>"
-                                >Export XLS <i class="bi bi-filetype-xls"></i
-                              ></a>
-                              <a
-                                class="dropdown-item justify-content-between"
-                                href="#"
-                                >Export CSV <i class="bi bi-filetype-csv"></i
-                              ></a>
-                              <a
-                                class="dropdown-item justify-content-between"
-                                href="#"
-                                >Export PDF <i class="bi bi-filetype-pdf"></i
-                              ></a>
-                              <a
-                                class="dropdown-item justify-content-between"
-                                href="#"
-                                >Export All <i class="bi bi-files"></i
-                              ></a>
-                              <a
-                                class="dropdown-item justify-content-between"
-                                href="#"
-                                >Download Sample <i class="bi bi-cloud-download"></i
-                              ></a>
-                            </div>
-                          </div>
-                  </div>
                 </div>
               </div>
               <div class="card-body">
