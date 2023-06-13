@@ -6,7 +6,7 @@ $requiredPassword = 'required';
 if ($getData != null) {
     extract($getData);
 
-    $pengguna_password = '';
+    $member_password = '';
     $requiredPassword = '';
 }
 
@@ -66,8 +66,8 @@ if (session()->getFlashdata('hasForm')) {
                         <div class="col-md-8">
                             <div class="form-group mb-3 w-50">
                                 <label for="" class="mb-3">Foto Profil</label>
-                                <?php if (isset($pengguna_foto)) : ?>
-                                    <a href="<?= uploaded($pengguna_foto, 'pengguna') ?>" target="_BLANK">
+                                <?php if (isset($member_foto)) : ?>
+                                    <a href="<?= uploaded($member_foto, 'member') ?>" target="_BLANK">
                                         [lihat foto]
                                     </a>
                                 <?php endif ?>
@@ -75,15 +75,15 @@ if (session()->getFlashdata('hasForm')) {
                             </div>
                             <div class="form-group mb-3">
                                 <label for="" class="mb-3">Nama Lengkap</label>
-                                <?= input_text('pengguna_nama', $pengguna_nama ?? '', '', 'required') ?>
+                                <?= input_text('member_nama', $member_nama ?? '', '', 'required') ?>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="" class="mb-3">Username</label>
-                                <?= input_text('pengguna_username', $pengguna_username ?? '', '', 'required') ?>
+                                <?= input_text('member_username', $member_username ?? '', '', 'required') ?>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="" class="mb-3">Password</label>
-                                <?= input_text('pengguna_password', $pengguna_password ?? '', '', $requiredPassword) ?>
+                                <?= input_text('member_password', $member_password ?? '', '', $requiredPassword) ?>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="" class="mb-3">Status</label>
@@ -93,7 +93,7 @@ if (session()->getFlashdata('hasForm')) {
                                 $op['N'] = 'Tidak Aktif';
                                 $op['B'] = 'Blokir';
                                 ?>
-                                <?= select('pengguna_status', $op, $pengguna_status ?? '', '', 'required') ?>
+                                <?= select('member_status', $op, $member_status ?? '', '', 'required') ?>
                             </div>
                             <div class="form-group mb-3">
                                 <button class="btn btn-primary" type="submit"><i class="bi bi-save"></i> Simpan</button>
@@ -114,7 +114,7 @@ if (session()->getFlashdata('hasForm')) {
 <?= $this->section('javascript') ?>
 <script>
     let pristine;
-    let elPenggunaUsername = document.querySelector('[name=pengguna_username]');
+    let elPenggunaUsername = document.querySelector('[name=member_username]');
     let elId = document.querySelector('[name=id]');
     window.onload = function() {
         let form = document.getElementById("formData");

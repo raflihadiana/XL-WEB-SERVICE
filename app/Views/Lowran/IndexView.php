@@ -38,7 +38,57 @@
                 </div>
               </div>
               <div class="card-body">
-                <div class="table-responsive-xl datatable-minimal">
+                    <!--BorderLess Modal Modal -->
+                    <div
+                      class="modal fade text-left modal-borderless"
+                      id="border-less"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="myModalLabel1"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="modal-dialog modal-dialog-scrollable"
+                        role="document"
+                      >
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Import Data</h5>
+                            <button
+                              type="button"
+                              class="close rounded-pill"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            >
+                              <i data-feather="x"></i>
+                            </button>
+                          </div>
+                          <form action="lowran/import" method="post" enctype="multipart/form-data">
+                            <div class="modal-body">
+                              <label> File Extention (.xlsx) </label>
+                              <input type="file" name="file_excel" class="form-control" required>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-light-primary"
+                                data-bs-dismiss="modal"
+                              >
+                                <i class="bx bx-x d-block d-sm-none"></i>
+                                <span class="d-none d-sm-block">Close</span>
+                              </button>
+                              <button
+                                type="submit"
+                                class="btn btn-primary ms-1"
+                              >
+                                <i class="bx bx-check d-block d-sm-none"></i>
+                                <span class="d-none d-sm-block">Submit</span>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
                   <table class="table" id="dt">
                     <thead>
                       <tr>

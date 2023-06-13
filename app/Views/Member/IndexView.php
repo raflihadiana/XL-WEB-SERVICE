@@ -1,3 +1,4 @@
+
 <?= $this->extend('_Layouts/IndexView') ?>
 
 <?= $this->section('content') ?>
@@ -86,7 +87,7 @@
                                 <td>
                                     <div class="btn-group mb-1">
                                         <div class="dropdown">
-                                            <button class="btn btn-dark dropdown-toggle me-1" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button class="btn btn-success dropdown-toggle me-1" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Aksi
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

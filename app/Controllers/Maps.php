@@ -19,7 +19,7 @@ class Maps extends BaseController {
             if (isset($_FILES['select_file']['name'])) {
                 $config['upload_path'] = './kml/';
                 $config['allowed_types'] = '*';
-                $config['file_name'] = random_string('alnum', 8) . '.' . pathinfo($_FILES['select_file']['name'], PATHINFO_EXTENSION);
+                $config['file_name'] = random_bytes('alnum', 8) . '.' . pathinfo($_FILES['select_file']['name'], PATHINFO_EXTENSION);
 
                 $this->load->library('upload', $config);
 

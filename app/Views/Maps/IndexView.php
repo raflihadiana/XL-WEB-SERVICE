@@ -18,14 +18,14 @@
 <section class="section">
     <div class="card">
         <div class="card-header">
-        <h5 class="card-title">Minimal jQuery Datatable</h5>
+        <h5 class="card-title">Fiber Leaflet Map</h5>
         </div>
         <div class="card-body">
             <div id="map" style="height: 600px"></div>  
             <br />
             <div class="container">
                 <h6 align="center">Uploading a KML file using Ajax and Displaying on a Leaflet Map</h6>
-                <form method="post" id="upload_form" enctype="multipart/form-data">
+                <form method="post" id="upload_form" enctype="multipart/form-data" required>
                     <div class="form-control form-control-sm">
                         <table class="table">
                             <tr>
@@ -47,7 +47,7 @@
 <section class="section">
         <div class="card">
             <div class="card-header">
-                Simple Datatable
+                Maps KMZ Datatable
             </div>
             <div class="card-body">
                 <table class="table table-striped" id="table1">

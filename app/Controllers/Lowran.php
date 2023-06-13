@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\LowranModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\AutoFilter\Column;
+
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Lowran extends BaseController
@@ -116,6 +116,59 @@ class Lowran extends BaseController
         header ('Cache-Control: max-age=0');
         $writer->save('php://output');
         exit();
+    }
+
+    public function import()
+    {
+        $file = $this->request->getFile('file_excel');
+        $extension = $file->getClientExtension();
+        if ($extension == 'xlsx' || $extension == 'xls') {
+            if ($extension == 'xls') {
+                $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xls();
+            } else {
+                $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+            }
+            $spreadsheet = $reader->load($file);
+            $lowran = $spreadsheet->getActiveSheet();
+            foreach ($lowran as $key => $value) {
+                if ($key == '@') {
+                    continue;
+                }
+                $data = [
+                    'tower_id_ne' => $value[1],
+                    'site_name' => $value[2],
+                    'long' => $value[3],
+                    'lat' => $value[4],
+                    'priority' => $value[5],
+                    'tower_id_fe' => $value[6],
+                    'site_name_nd' => $value[7],
+                    'long_nd' => $value[8],
+                    'lat_nd' => $value[9],
+                    'priority_nd' => $value[10],
+                    'ba_desain' => $value[11],
+                    'ba_design_status' => $value[12],
+                    'pag_link' => $value[13],
+                    'link_name' => $value[14],
+                    'city_design' => $value[15],
+                    'city_dominan' => $value[16],
+                    'status_design' => $value[17],
+                    'span_seq' => $value[18],
+                    'plan_ring' => $value[19],
+                    'type_design' => $value[20],
+                    'flp' => $value[21],
+                    'plan_distance_km' => $value[22],
+                    'x_c' => $value[23],
+                    'status_design_xc' => $value[24],
+                    'syncron_own' => $value[25],
+                    'id' => 0
+                ];                
+                $this->$lowran->insert($data);
+            }
+            return redirect()->back()->with('success', 'Data Excel Berhasil Diimport');
+        } else {
+            return redirect()->back()->with('error', 'Format File Tidak Sesuai');
+        }
+        
     }
 }
 

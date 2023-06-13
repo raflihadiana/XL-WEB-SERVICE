@@ -20,8 +20,8 @@
             <div class="auth-logo">
                 <a href="index.html"><img src="/mazer/dist/assets/images/logo/xl.svg" alt="Logo"></a>
             </div>
-            <h1 class="auth-title">Log in.</h1>
-            <form action="<?= site_url('auth/login') ?>" method="POST">
+            <h2 class="auth-title">Log in.</h2>
+            <form action="/auth/login" method="post">
                 <div class="form-group position-relative has-icon-left mb-4">
                     <input type="text" class="form-control form-control-xl" name="username" placeholder="Username">
                     <div class="form-control-icon">
