@@ -79,5 +79,20 @@ function countStatusRelease($table, $column) {
     return $query;
 }
 
+// Displaying Photos
+
+function displayUserPhotos($table, $column) {
+    $db = \Config\Database::connect();
+    $query = $db->table($table)->select($column)->get()->getResultArray();
+
+    foreach ($query as $row) {
+        $imagePath = $row[$column];
+        echo "<img src='$imagePath' alt='User Photo'><br>";
+    }
+}
+
+?>
+
+
 
 ?>

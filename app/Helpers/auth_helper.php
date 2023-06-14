@@ -3,16 +3,16 @@
 
 function Auth()
 {
-    $PenggunaModel = new \App\Models\MemberModel();
+    $MemberModel = new \App\Models\MemberModel();
     if(session()->get('userId'))
     {
         $userId = session()->get('userId');
-        $getPengguna = $PenggunaModel->where('id',$userId)
+        $getMember = $MemberModel->where('id',$userId)
                                     ->where('member_status','A')
                                     ->first();
-        if($getPengguna!=null)
+        if($getMember!=null)
         {
-            return $getPengguna;
+            return $getMember;
         }
         else {
             return false;

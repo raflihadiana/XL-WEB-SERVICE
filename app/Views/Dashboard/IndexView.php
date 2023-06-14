@@ -157,7 +157,7 @@
                 <div class="card-body py-4 px-4">
                     <div class="d-flex align-items-center">
                         <div class="avatar avatar-xl">
-                            <img src="/mazer/dist/assets/images/faces/1.jpg" alt="Face 1">
+                            <img src="<?= uploaded($auth->member_foto, 'member') ?>" alt="Face 1">
                         </div>
                         <div class="ms-3 name">
                             <h5 class="font-bold"><?=$auth->member_nama?></h5>
