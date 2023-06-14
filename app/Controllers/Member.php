@@ -47,7 +47,7 @@ class Member extends BaseController
 
         if($this->request->getPost('member_password')!='')
         {
-            $data['member_password'] = hashing($this->request->getPost('member_password'),PASSWORD_DEFAULT);
+            $data['member_password'] = password_hash($this->request->getPost('member_password'),PASSWORD_DEFAULT);
         }
         else {
             unset($data['member_password']);
@@ -71,6 +71,25 @@ class Member extends BaseController
         $MemberModel->delete($id);
         session()->setFlashData(['info' => 'success', 'message' => 'Sukses dihapus']);
         return redirect()->to($this->url);
+    }
+
+    public function checkusername($member_username,$id='')
+    {
+        $MemberModel = new \App\Models\MemberModel();
+        $checkUser = $MemberModel->where('member_username',$member_username);
+        if($id!='')
+        {
+            $checkUser->where('id!=',$id);
+        }
+
+        if($checkUser->first()==null)
+        {
+            $status = true;
+        }
+        else {
+            $status = false;
+        }
+        return $this->response->setJson(['status'=>$status]);
     }
     
 }

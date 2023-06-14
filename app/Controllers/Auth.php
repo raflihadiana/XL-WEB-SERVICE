@@ -7,7 +7,7 @@ class Auth extends BaseController
     public function index()
     {
         if (Auth() != false) {
-            return redirect()->to('home');
+            return redirect()->to('dashboard');
         }
         $data['title'] = 'Dashboard';
         return view('Auth/IndexView', $data);
@@ -28,9 +28,9 @@ class Auth extends BaseController
         
         if ($getMember !== null) {
             if (is_string($member_password) && password_verify($member_password, $getMember->member_password)) {
-                if ($getMember->pengguna_status == 'A') {
+                if ($getMember->member_status == 'A') {
                     session()->set('userId', $getMember->id);
-                    return redirect()->to('home');
+                    return redirect()->to('dashboard');
                 } else {
                     session()->setFlashData(['info' => 'error', 'message' => 'Akun telah dinonaktifkan, hubungi admin']);
                 }

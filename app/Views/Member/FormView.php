@@ -114,18 +114,18 @@ if (session()->getFlashdata('hasForm')) {
 <?= $this->section('javascript') ?>
 <script>
     let pristine;
-    let elPenggunaUsername = document.querySelector('[name=member_username]');
+    let elMemberUsername = document.querySelector('[name=member_username]');
     let elId = document.querySelector('[name=id]');
     window.onload = function() {
         let form = document.getElementById("formData");
 
         pristine = new Pristine(form);
 
-        elPenggunaUsername.addEventListener('input', async (e) => {
-            let get = await fetch('<?= site_url($url . '/checkusername') ?>/' + elPenggunaUsername.value + '/' + elId.value);
+        elMemberUsername.addEventListener('input', async (e) => {
+            let get = await fetch('<?= site_url($url . '/checkusername') ?>/' + elMemberUsername.value + '/' + elId.value);
             let resp = await get.json();
             if (!resp.status) {
-                pristine.addError(elPenggunaUsername, "Username sudah digunakan");
+                pristine.addError(elMemberUsername, "Username sudah digunakan");
             }
         });
 

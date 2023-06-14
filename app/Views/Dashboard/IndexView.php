@@ -2,40 +2,12 @@
 
 <?= $this->section('content') ?>
 
+<?php
+    $auth = Auth();
+?>
+
 <div class="page-heading">
-    
     <h3>NPD Dashboard</h3>
-    <!-- <div class="header-top-right">
-                <div class="dropdown">
-                  <a
-                    href="#"
-                    id="topbarUserDropdown"
-                    class="user-dropdown d-flex align-items-center dropend dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <div class="avatar avatar-md2">
-                      <img src="/mazer/dist/assets/images/faces/1.jpg" alt="Avatar" />
-                    </div>
-                    <div class="text">
-                      <h6 class="user-dropdown-name">John Ducky</h6>
-                      <p class="user-dropdown-status text-sm text-muted">
-                        Member
-                      </p>
-                    </div>
-                  </a>
-                  <ul
-                    class="dropdown-menu dropdown-menu-end shadow-lg"
-                    aria-labelledby="topbarUserDropdown"
-                  >
-                    <li><a class="dropdown-item" href="#">My Account</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                      <a class="dropdown-item" href="auth-login.html">Logout</a>
-                    </li>
-                  </ul>
-                </div> -->
 </div>
 <div class="page-content">
 <section class="row">
@@ -188,8 +160,8 @@
                             <img src="/mazer/dist/assets/images/faces/1.jpg" alt="Face 1">
                         </div>
                         <div class="ms-3 name">
-                            <h5 class="font-bold">John Duck</h5>
-                            <h6 class="text-muted mb-0">@johnducky</h6>
+                            <h5 class="font-bold"><?=$auth->member_nama?></h5>
+                            <h6 class="text-muted mb-0">@<?=$auth->member_username?></h6>
                         </div>
                     </div>
                 </div>
